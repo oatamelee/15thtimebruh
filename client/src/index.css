@@ -1,0 +1,124 @@
+/* Font definitions */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 120 100% 32%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 45 93% 50%;
+  --accent-foreground: 222.2 84% 4.9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 207 90% 54%;
+  --radius: 0.5rem;
+  --chart-1: 207 90% 54%;
+  --chart-2: 120 100% 32%;
+  --chart-3: 45 93% 50%;
+  --chart-4: 0 84.2% 60.2%;
+  --chart-5: 262 83% 58%;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 120 100% 32%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 45 93% 50%;
+  --accent-foreground: 222.2 84% 4.9%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 207 90% 54%;
+  --chart-1: 207 90% 54%;
+  --chart-2: 120 100% 32%;
+  --chart-3: 45 93% 50%;
+  --chart-4: 0 84.2% 60.2%;
+  --chart-5: 262 83% 58%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    @apply bg-gradient-to-br from-primary to-blue-800 text-white;
+  }
+  
+  .card-highlight {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .border-accent-top {
+    @apply border-t-4 border-accent;
+  }
+  
+  .border-primary-top {
+    @apply border-t-4 border-primary;
+  }
+  
+  .border-secondary-top {
+    @apply border-t-4 border-secondary;
+  }
+  
+  .btn-shine {
+    position: relative;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3);
+    transform: scale(1.08);
+    border: 2px solid #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-shine:hover {
+    transform: scale(1.12);
+  }
+}
+
+@layer base {
+  :root {
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+  }
+
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+}
